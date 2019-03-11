@@ -37,10 +37,10 @@ function fail(item) {
 
 function repair(item) {
   if (item.durability === 100) {
-    newItem = {...item}
+    const newItem = {...item}
     return newItem
   } else {
-    newItem = {...item}
+    const newItem = {...item}
     newItem.durability = 100
     return newItem
   }
@@ -48,11 +48,11 @@ function repair(item) {
 
 function get(item) {
   if (item.enhancement > 0) {
-    newItem = {...item}
+    const newItem = {...item}
     newItem.name = `[+${newItem.enhancement}] ${newItem.name}`
     return newItem
   } else {
-    newItem = {...item}
+    const newItem = {...item}
     return newItem
   }
 }
