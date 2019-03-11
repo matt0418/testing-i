@@ -36,7 +36,14 @@ function fail(item) {
  }
 
 function repair(item) {
-  return { ...item };
+  if (item.durability === 100) {
+    newItem = {...item}
+    return newItem
+  } else {
+    newItem = {...item}
+    newItem.durability = 100
+    return newItem
+  }
 }
 
 function get(item) {
