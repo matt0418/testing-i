@@ -37,12 +37,10 @@ describe('enhancer.js', () => {
         it('should return newItem same enhancement', () => {
             expect(succeed(itemHighEnhacement)).toEqual(itemHighEnhacement)
         })
-
         it('should return newItem with higher enhacement', () => {
             expect(succeed(item)).toEqual(newItem)
         })
     })
-
     describe('fail()', () => {
         it('should return new item with durability decreased by 5', () => {
             expect(fail({name: "test", enhancement: 14, durability: 10})).toEqual({name: "test", enhancement: 14, durability: 5})
@@ -55,3 +53,5 @@ describe('enhancer.js', () => {
         })
     })
 })
+
+console.log('gg')
