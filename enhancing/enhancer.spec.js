@@ -19,6 +19,8 @@ let newItem = {
 }
 
 
+
+
 describe('enhancer.js', () => {
     describe('succeed()', () => {
         it('should return newItem same enhancement', () => {

@@ -23,12 +23,12 @@ function fail(item) {
     return newItem
   } else {
     if (item.enhancement > 16) {
-      newItem = {...item}
+      const newItem = {...item}
       newItem.enhancement = newItem.enhancement-1
       newItem.durability = newItem.durability-10
       return newItem
     } else {
-      newItem = {...item}
+      const newItem = {...item}
       newItem.durability = newItem.durability-10
       return newItem
     }
