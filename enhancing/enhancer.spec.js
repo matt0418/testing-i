@@ -1,4 +1,4 @@
-const { succeed, fail, repair } = require('./enhancer.js');
+const { succeed, fail, repair, get } = require('./enhancer.js');
 // test away!
 let itemHighEnhacement = {
     name: "test",
@@ -45,6 +45,14 @@ describe('enhancer.js', () => {
         })
         it('should return same item', () => {
             expect(repair({name: "test", durability: 100, enhancement: 16})).toEqual({name: "test", durability: 100, enhancement: 16})
+        })
+    })
+    describe('get()', () => {
+        it('should return newItem with enhanced name', () => {
+            expect(get({name: "test", durability: 100, enhancement: 16})).toEqual({name: "[+16] test", durability: 100, enhancement: 16})
+        })
+        it('should return same item', () => {
+            expect(get({name: "test", durability: 100, enhancement: 0})).toEqual({name: "test", durability: 100, enhancement: 0})
         })
     })
 })
